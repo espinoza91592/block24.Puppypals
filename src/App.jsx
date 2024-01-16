@@ -1,12 +1,20 @@
-import { useState } from "react";
+import React, { useState }  from "react";
 import "./App.css";
-import { puppyList } from "./data.js";
+import { puppyList } from "./data";
 
-function App() {
+const App = => {
+
   const [puppies, setPuppies] = useState(puppyList);
-  console.log(puppylis);
+  console.log(puppyList);
 
-  return <div></div>;
-}
+  return (
+    <div>
+      <h1>Puppies</h1>
+      {puppies.map((puppy) => {
+        return <p>{puppy.name}</p>;
+      })}
+    </div>
+  )
+};
 
 export default App;
